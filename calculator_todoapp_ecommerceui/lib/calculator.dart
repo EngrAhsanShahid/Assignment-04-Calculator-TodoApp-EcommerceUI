@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:math_expressions/math_expressions.dart';
 
@@ -53,8 +55,13 @@ class _CalculatorState extends State<Calculator> {
                 children: [
                   Text(
                     result,
-                    style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                        backgroundColor: Colors.black,
+                        color: Colors.white),
                   ),
+                  SizedBox(height: 40),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
@@ -64,6 +71,7 @@ class _CalculatorState extends State<Calculator> {
                       btn('/'),
                     ],
                   ),
+                  SizedBox(height: 40),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
@@ -73,6 +81,7 @@ class _CalculatorState extends State<Calculator> {
                       btn('*'),
                     ],
                   ),
+                  SizedBox(height: 40),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
@@ -82,6 +91,7 @@ class _CalculatorState extends State<Calculator> {
                       btn('-'),
                     ],
                   ),
+                  SizedBox(height: 40),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
@@ -91,6 +101,7 @@ class _CalculatorState extends State<Calculator> {
                       ElevatedButton(onPressed: output, child: Text("=")),
                     ],
                   ),
+                  SizedBox(height: 40),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
